@@ -1,7 +1,9 @@
 const express = require('express');
 const { verifyToken } = require('../utills/jwtAuth');
-const { storeInfo, addProduct } = require('../controller/sellerController');
+const { storeInfo, addProduct, sellerInventory } = require('../controller/sellerController');
 const sellerRouter = express.Router();
+
+sellerRouter.get('/:id', sellerInventory);
 
 sellerRouter.patch('/storeInfo', verifyToken ,storeInfo);
 

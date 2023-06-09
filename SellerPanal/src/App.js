@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { Navbar } from "./components";
 
 import {Login, Signup, Dashboard} from './pages/index'
+import View from "./pages/userView/View";
 
 function App() {
   const user = useSelector(state => state.user);
@@ -17,6 +18,7 @@ function App() {
     <BrowserRouter>
     <Navbar/>
       <Routes>
+        <Route path="api/seller/:id" element={<View/>} />
         {
           !user ? (
             <>

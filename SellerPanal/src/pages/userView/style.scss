@@ -1,0 +1,19 @@
+.view {
+
+    .view__search {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(242, 184, 109);
+        padding: 20px;
+
+        input {
+            padding: 10px;
+            border-radius: 2rem;
+            width: 300px;
+        }
+    }
+
+    .view__list {
+        padding: 40px;
+    }
+}

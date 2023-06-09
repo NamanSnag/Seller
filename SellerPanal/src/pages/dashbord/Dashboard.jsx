@@ -1,13 +1,10 @@
 import React from "react";
-import { InventoryForm, StoreInfo } from "../../components";
+import { InventoryForm, StoreInfo, InventoryList } from "../../components";
 
 import "./style.scss";
 
 const Dashboard = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-      };
+ 
   return (
     <>
       <div className="marginTop"></div>
@@ -21,7 +18,9 @@ const Dashboard = () => {
           <InventoryForm/>
         </div>
 
-        <div id="allInventory"></div>
+        <div id="allInventory">
+          <InventoryList />
+        </div>
       </div> 
     </div>
     </>

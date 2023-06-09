@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
 import axios from "axios";
-import { base_URL } from "../../base";
 import { useSelector } from 'react-redux';
 
 const StoreInfo = () => {
@@ -17,7 +16,7 @@ const StoreInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `${base_URL}/api/seller/storeInfo`;
+      const url = `/api/seller/storeInfo`;
       await axios.patch(url, {...data, token:token});
       alert("store information updated")
     } catch (error) {

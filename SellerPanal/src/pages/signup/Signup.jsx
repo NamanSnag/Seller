@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
 import axios from "axios";
-import { base_URL } from "../../base";
 
 const Signup = () => {
   const [credentials, setCredentials] = useState({
@@ -19,7 +18,7 @@ const Signup = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const url = `${base_URL}/api/auth/seller/register`;
+    const url = `/api/auth/seller/register`;
     await axios.post(url, credentials);
     alert('Successfully registered');
     navigate('/login');

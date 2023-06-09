@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 import './style.scss'
 import { useSelector } from 'react-redux';
-import { base_URL } from '../../base';
 import axios from 'axios';
 
 const InventoryForm = () => {
@@ -20,9 +19,8 @@ const InventoryForm = () => {
       const token = useSelector(state => state.token)
 
       const handleSubmit = async (e) => {
-        e.preventDefault();
         try {
-          const url = `${base_URL}/api/inventory/addProduct`;
+          const url = `/api/seller/addProduct`;
           await axios.post(url, {...data, token:token});
           alert("store information updated")
         } catch (error) {
@@ -90,12 +88,12 @@ const InventoryForm = () => {
         </div>
         <div className="form-group">
           <label htmlFor="quantity">quantity : </label>
-          <input type="url" id="quantity" name="quantity" onChange={handleChange} />
+          <input type="number" id="quantity" name="quantity" onChange={handleChange} />
         </div>
         <div className="form-group">
-          <label htmlFor="storeTimings">Image URL : </label>
+          <label htmlFor="images">Image URL : </label>
           <input
-            type="text"
+            type="url"
             id="images"
             name="images"
             onChange={handleChange}

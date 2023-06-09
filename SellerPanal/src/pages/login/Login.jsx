@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { base_URL } from "../../base";
 import { setLogin } from "../../store";
 
 import "./style.scss";
@@ -23,7 +22,7 @@ const Login = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const url = `${base_URL}/api/auth/seller/login`;
+    const url = `/api/auth/seller/login`;
     const res = await axios.post(url, credentials);
     console.log(res.data.data);
     let payload = {

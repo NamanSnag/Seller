@@ -1,0 +1,23 @@
+.inventoryList{
+    padding: 20px;
+    .unique__URL {
+        display: flex;
+        justify-content: center;
+
+        .copyBtn {
+            padding: 10px;
+            background-color: rgb(5, 122, 247);
+            border-radius: 2rem;
+            font-size: 18px;
+            color: white;
+
+            &:hover {
+                background-color: rgb(23, 44, 163);
+            }
+        }
+    }
+
+    .list__container {
+        padding: 40px;
+    }
+}
