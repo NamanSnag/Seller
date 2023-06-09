@@ -18,7 +18,6 @@ function App() {
     <BrowserRouter>
     <Navbar/>
       <Routes>
-        <Route path="api/seller/:id" element={<View/>} />
         {
           !user ? (
             <>
@@ -31,6 +30,7 @@ function App() {
          </>
           )
         }
+        <Route path="/seller/inventory/:id" element={<View/>} />
       </Routes>
     </BrowserRouter>
   );

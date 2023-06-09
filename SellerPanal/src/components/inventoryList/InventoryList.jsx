@@ -10,7 +10,7 @@ const InventoryList = () => {
   const sellerId = useSelector(state=> state.user.id);
   let url = `/api/seller/${sellerId}`;
   const res = useFetch(url);
-  url = "https://sellerbynaman.onrender.com"+url;
+  url = `https://sellerbynaman.onrender.com/seller/inventory/${sellerId}`;
   const data = res.data.data;
   const handleCopy = () => {
     alert('URL copied to clipboard!');
