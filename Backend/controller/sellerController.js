@@ -44,4 +44,5 @@ const storeInfo = async (req, res, next) => {
 
 module.exports = {
   storeInfo: storeInfo,
+  addProduct: addProduct,
 };
