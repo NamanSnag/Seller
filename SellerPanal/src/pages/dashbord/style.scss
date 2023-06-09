@@ -1,0 +1,38 @@
+.dashboard__container {
+  padding: 10px;
+  background-color: #f5f5f5;
+
+  .dashboard__content {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "store allinventory"
+    "inventory allinventory"
+    ;
+
+    #storeInfo {
+        background-color: aqua;
+        grid-area: store;
+    }
+
+    #inventory {
+        background-color: antiquewhite;
+        grid-area: inventory;
+    }
+
+    #allInventory {
+        background-color: aquamarine;
+        grid-area: allinventory;
+    }
+    
+    @media  (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+    "store"
+    "inventory"
+    "allinventory"
+    ;
+    }
+  }
+}
