@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import useFetch from '../../hooks/useFetch';
 import Product from '../../components/product/Product';
+import { useParams } from 'react-router-dom'
 
 import './style.scss';
 
 const View = () => {
-  const sellerId = useSelector(state => state.user.id);
-  const url = `/api/seller/${sellerId}`;
+  const { id } = useParams();
+  const url = `/api/seller/${id}`;
   const res = useFetch(url);
   const data = res.data.data;
 
